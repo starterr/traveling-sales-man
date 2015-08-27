@@ -160,22 +160,22 @@ for ( int i=0 ; i<n  ; i++)
     {
         test=true ;
     }
-    for ( int j=0 ; j<n+1  ; j++ )
+    for ( int j=i+1 ; j<n+1  ; j++ )
     {
         if (test==false && j==n)
            {
                break ;
            }
 
-       if(i!=j && i!=j+1 && j!=i+1)
-       {temp=two_swap(i,j,temp) ;
+       
+       temp=two_swap(i,j,temp) ;
          if (getdistance(temp)<best_distance)
             {
                 best_tour=temp ;
                 best_distance=getdistance(temp);
                 improve=0 ;
                 //cout<<getdistance(best_tour)<<"\n" ;
-            }}
+            }
 
         }
     }
